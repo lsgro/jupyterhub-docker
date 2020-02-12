@@ -12,13 +12,18 @@ defaultEntryPoints = ["https","http"]
   address = ":443"
     [entryPoints.https.tls]
       [[entryPoints.https.tls.certificates]]
-      certFile = "/etc/certs/jupyter_ens_uvsq_fr.crt"
-      keyFile = "/etc/certs/jupyter.ens.uvsq.fr.key"
+      certFile = "/etc/certs/self.crt"
+      keyFile = "/etc/certs/self.key"
 
 [docker]
 domain = "docker.local"
 watch = true
 
+[log]
+level = "DEBUG"
+  
 [api]
-  [api.statistics]
-    recentErrors = 10
+entryPoint = "traefik"
+dashboard = true
+
+[accessLog]
