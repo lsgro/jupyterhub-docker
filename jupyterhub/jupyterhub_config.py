@@ -17,6 +17,7 @@ c.Spawner.default_url = '/lab'
 
 ## Authenticator
 c.JupyterHub.authenticator_class = 'dummyauthenticator.DummyAuthenticator'
+c.Authenticator.admin_users = {'admin'}
 
 ## Docker spawner
 c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'

@@ -1,6 +1,3 @@
-debug = true
-
-logLevel = "ERROR"
 defaultEntryPoints = ["https","http"]
 
 [entryPoints]
@@ -20,10 +17,11 @@ domain = "docker.local"
 watch = true
 
 [log]
-level = "DEBUG"
+level = "WARN"
   
 [api]
 entryPoint = "traefik"
 dashboard = true
 
-[accessLog]
+# uncomment to dump all requests to stdout
+# [accessLog]
